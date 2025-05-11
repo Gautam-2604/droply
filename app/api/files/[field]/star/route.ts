@@ -9,7 +9,6 @@ export async function PATCH(
   props: { params: Promise<{ fileId: string }> }
 ) {
   try {
-    // Check authentication
     const { userId } = await auth();
     if (!userId) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -23,8 +22,6 @@ export async function PATCH(
         { status: 400 }
       );
     }
-
-    // Get the current file
     const [file] = await db
       .select()
       .from(files)
@@ -33,8 +30,6 @@ export async function PATCH(
     if (!file) {
       return NextResponse.json({ error: "File not found" }, { status: 404 });
     }
-
-    // Toggle the isStarred status
     const updatedFiles = await db
       .update(files)
       .set({ isStarred: !file.isStarred })

@@ -29,8 +29,6 @@ export async function DELETE(
         { status: 400 }
       );
     }
-
-    // Get the file to be deleted
     const [file] = await db
       .select()
       .from(files)
@@ -39,8 +37,6 @@ export async function DELETE(
     if (!file) {
       return NextResponse.json({ error: "File not found" }, { status: 404 });
     }
-
-    // Delete file from ImageKit if it's not a folder
     if (!file.isFolder) {
       try {
         let imagekitFileId = null;
@@ -79,8 +75,6 @@ export async function DELETE(
         console.error(`Error deleting file ${fileId} from ImageKit:`, error);
       }
     }
-
-    // Delete file from database
     const [deletedFile] = await db
       .delete(files)
       .where(and(eq(files.id, fileId), eq(files.userId, userId)))
