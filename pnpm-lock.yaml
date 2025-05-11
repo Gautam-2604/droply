@@ -29,6 +29,9 @@ importers:
       '@heroui/theme':
         specifier: ^2.4.15
         version: 2.4.15(tailwindcss@4.1.6)
+      '@heroui/toast':
+        specifier: ^2.0.9
+        version: 2.0.9(@heroui/system@2.4.15(@heroui/theme@2.4.15(tailwindcss@4.1.6))(framer-motion@12.10.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@heroui/theme@2.4.15(tailwindcss@4.1.6))(framer-motion@12.10.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@hookform/resolvers':
         specifier: ^5.0.1
         version: 5.0.1(react-hook-form@7.56.3(react@19.1.0))
@@ -38,6 +41,9 @@ importers:
       '@neondatabase/serverless':
         specifier: ^1.0.0
         version: 1.0.0
+      '@react-types/shared':
+        specifier: ^3.29.0
+        version: 3.29.0(react@19.1.0)
       dotenv:
         specifier: ^16.5.0
         version: 16.5.0
@@ -53,12 +59,18 @@ importers:
       imagekit:
         specifier: ^6.0.0
         version: 6.0.0
+      imagekitio-next:
+        specifier: ^1.0.1
+        version: 1.0.1(next@15.3.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       lucide-react:
         specifier: ^0.509.0
         version: 0.509.0(react@19.1.0)
       next:
         specifier: 15.3.2
         version: 15.3.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      next-themes:
+        specifier: ^0.4.6
+        version: 0.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react:
         specifier: ^19.1.0
         version: 19.1.0
@@ -624,8 +636,22 @@ packages:
     peerDependencies:
       tailwindcss: '>=3.4.0'
 
+  '@heroui/toast@2.0.9':
+    resolution: {integrity: sha512-V/x7bkRRS5BabF3Oe4sJWiKygkGtN9/mwFw0phJwx7PYV2Q6WuOvOvq+Zbt8bEz21j58glg4u+eLFBChNPYn7A==}
+    peerDependencies:
+      '@heroui/system': '>=2.4.10'
+      '@heroui/theme': '>=2.4.12'
+      framer-motion: '>=11.5.6 || >=12.0.0-alpha.1'
+      react: '>=18 || >=19.0.0-rc.0'
+      react-dom: '>=18 || >=19.0.0-rc.0'
+
   '@heroui/use-aria-button@2.2.13':
     resolution: {integrity: sha512-gYgoaLxF4X8EnKH5HINrujiJlUtyakKRaeUpfohCrCDL/VEHAwi6+wJVC1AvE1gOfFx5db8+2TUw71IaSgUNGA==}
+    peerDependencies:
+      react: '>=18 || >=19.0.0-rc.0'
+
+  '@heroui/use-is-mobile@2.2.9':
+    resolution: {integrity: sha512-UVc9wKK3kg2bIAQPaKuCA53qd1Snrd8yxIf/dtbh3PqYjqoyN7c1hUFZxe9ZW8Vb3AovquWDnPYbx4vjdzcQiQ==}
     peerDependencies:
       react: '>=18 || >=19.0.0-rc.0'
 
@@ -928,6 +954,12 @@ packages:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
+  '@react-aria/landmark@3.0.2':
+    resolution: {integrity: sha512-KVXa9s3fSgo/PiUjdbnPh3a1yS4t2bMZeVBPPzYAgQ4wcU2WjuLkhviw+5GWSWRfT+jpIMV7R/cmyvr0UHvRfg==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
+      react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
+
   '@react-aria/overlays@3.27.0':
     resolution: {integrity: sha512-2vZVgL7FrloN5Rh8sAhadGADJbuWg69DdSJB3fd2/h5VvcEhnIfNPu9Ma5XmdkApDoTboIEsKZ4QLYwRl98w6w==}
     peerDependencies:
@@ -942,6 +974,12 @@ packages:
 
   '@react-aria/textfield@3.17.2':
     resolution: {integrity: sha512-4KINB0HueYUHUgvi/ThTP27hu4Mv5ujG55pH3dmSRD4Olu/MRy1m/Psq72o8LTf4bTOM9ZP1rKccUg6xfaMidA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
+      react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
+
+  '@react-aria/toast@3.0.2':
+    resolution: {integrity: sha512-iaiHDE1CKYM3BbNEp3A2Ed8YAlpXUGyY6vesKISdHEZ2lJ7r+1hbcFoTNdG8HfbB8Lz5vw8Wd2o+ZmQ2tnDY9Q==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
@@ -974,6 +1012,11 @@ packages:
 
   '@react-stately/overlays@3.6.15':
     resolution: {integrity: sha512-LBaGpXuI+SSd5HSGzyGJA0Gy09V2tl2G/r0lllTYqwt0RDZR6p7IrhdGVXZm6vI0oWEnih7yLC32krkVQrffgQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
+
+  '@react-stately/toast@3.1.0':
+    resolution: {integrity: sha512-9W2+evz+EARrjkR1QPLlOL5lcNpVo6PjMAIygRSaCPJ6ftQAZ6B+7xTFGPFabWh83gwXQDUgoSwC3/vosvxZaQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
@@ -2137,9 +2180,20 @@ packages:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
 
+  imagekit-javascript@3.1.0:
+    resolution: {integrity: sha512-56YmmOg6vKarIg4A41E9T08qQ2ri8862AYU/Ykhrbr9Cd8i6BIeKkroR16cmsNYFOIoLk35/O7b8o7I8DoyGaQ==}
+
   imagekit@6.0.0:
     resolution: {integrity: sha512-0MsxThZM2PYH6ngwN3zi9PDa8pCB5mEZG2FSySYiZk3Hfri8IMwUqVNzRlLQewBHQ3YtTN9M59O0Xe9HRewtOA==}
     engines: {node: '>=12.0.0'}
+
+  imagekitio-next@1.0.1:
+    resolution: {integrity: sha512-rUubuWG7EGMj14hD3sNBQrddh9wbLLIuyebmOaQTSV3GlKsMbbbBKD819zvnEf4HA/rhzCZY+1rKBh4ZxrimyA==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      next: ^12 || ^13 || ^14 || ^15
+      react: ^16.13.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+      react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   import-fresh@3.3.1:
     resolution: {integrity: sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==}
@@ -2546,6 +2600,12 @@ packages:
   negotiator@1.0.0:
     resolution: {integrity: sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg==}
     engines: {node: '>= 0.6'}
+
+  next-themes@0.4.6:
+    resolution: {integrity: sha512-pZvgD5L0IEvX5/9GWyHMf3m8BKiVQwsCMHfoFosXtXBMnaS0ZnIJ9ST4b4NqLVKDEm8QBxoNNGNaBv2JNF6XNA==}
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
 
   next@15.3.2:
     resolution: {integrity: sha512-CA3BatMyHkxZ48sgOCLdVHjFU36N7TF1HhqAHLFOkV6buwZnvMI84Cug8xD56B9mCuKrqXnLn94417GrZ/jjCQ==}
@@ -3710,6 +3770,24 @@ snapshots:
       tailwind-variants: 0.3.0(tailwindcss@4.1.6)
       tailwindcss: 4.1.6
 
+  '@heroui/toast@2.0.9(@heroui/system@2.4.15(@heroui/theme@2.4.15(tailwindcss@4.1.6))(framer-motion@12.10.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@heroui/theme@2.4.15(tailwindcss@4.1.6))(framer-motion@12.10.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+    dependencies:
+      '@heroui/react-utils': 2.1.10(react@19.1.0)
+      '@heroui/shared-icons': 2.1.7(react@19.1.0)
+      '@heroui/shared-utils': 2.1.9
+      '@heroui/spinner': 2.2.16(@heroui/theme@2.4.15(tailwindcss@4.1.6))(framer-motion@12.10.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@heroui/system': 2.4.15(@heroui/theme@2.4.15(tailwindcss@4.1.6))(framer-motion@12.10.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@heroui/theme': 2.4.15(tailwindcss@4.1.6)
+      '@heroui/use-is-mobile': 2.2.9(react@19.1.0)
+      '@react-aria/interactions': 3.25.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@react-aria/toast': 3.0.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@react-aria/utils': 3.28.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@react-stately/toast': 3.1.0(react@19.1.0)
+      '@react-stately/utils': 3.10.6(react@19.1.0)
+      framer-motion: 12.10.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+
   '@heroui/use-aria-button@2.2.13(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@heroui/shared-utils': 2.1.9
@@ -3721,6 +3799,11 @@ snapshots:
       react: 19.1.0
     transitivePeerDependencies:
       - react-dom
+
+  '@heroui/use-is-mobile@2.2.9(react@19.1.0)':
+    dependencies:
+      '@react-aria/ssr': 3.9.8(react@19.1.0)
+      react: 19.1.0
 
   '@heroui/use-safe-layout-effect@2.1.7(react@19.1.0)':
     dependencies:
@@ -4001,6 +4084,15 @@ snapshots:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
 
+  '@react-aria/landmark@3.0.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+    dependencies:
+      '@react-aria/utils': 3.28.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@react-types/shared': 3.29.0(react@19.1.0)
+      '@swc/helpers': 0.5.15
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+      use-sync-external-store: 1.5.0(react@19.1.0)
+
   '@react-aria/overlays@3.27.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@react-aria/focus': 3.20.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -4032,6 +4124,19 @@ snapshots:
       '@react-stately/utils': 3.10.6(react@19.1.0)
       '@react-types/shared': 3.29.0(react@19.1.0)
       '@react-types/textfield': 3.12.1(react@19.1.0)
+      '@swc/helpers': 0.5.15
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+
+  '@react-aria/toast@3.0.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+    dependencies:
+      '@react-aria/i18n': 3.12.8(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@react-aria/interactions': 3.25.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@react-aria/landmark': 3.0.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@react-aria/utils': 3.28.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@react-stately/toast': 3.1.0(react@19.1.0)
+      '@react-types/button': 3.12.0(react@19.1.0)
+      '@react-types/shared': 3.29.0(react@19.1.0)
       '@swc/helpers': 0.5.15
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
@@ -4082,6 +4187,12 @@ snapshots:
       '@react-types/overlays': 3.8.14(react@19.1.0)
       '@swc/helpers': 0.5.15
       react: 19.1.0
+
+  '@react-stately/toast@3.1.0(react@19.1.0)':
+    dependencies:
+      '@swc/helpers': 0.5.15
+      react: 19.1.0
+      use-sync-external-store: 1.5.0(react@19.1.0)
 
   '@react-stately/toggle@3.8.3(react@19.1.0)':
     dependencies:
@@ -5383,6 +5494,8 @@ snapshots:
 
   ignore@5.3.2: {}
 
+  imagekit-javascript@3.1.0: {}
+
   imagekit@6.0.0:
     dependencies:
       axios: 1.9.0
@@ -5393,6 +5506,13 @@ snapshots:
       uuid: 8.3.2
     transitivePeerDependencies:
       - debug
+
+  imagekitio-next@1.0.1(next@15.3.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+    dependencies:
+      imagekit-javascript: 3.1.0
+      next: 15.3.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
 
   import-fresh@3.3.1:
     dependencies:
@@ -5747,6 +5867,11 @@ snapshots:
   natural-compare@1.4.0: {}
 
   negotiator@1.0.0: {}
+
+  next-themes@0.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
 
   next@15.3.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
